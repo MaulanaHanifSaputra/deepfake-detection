@@ -50,11 +50,14 @@ import mysql.connector
 
 def get_db():
     return mysql.connector.connect(
-        host="localhost",
+        host="127.0.0.1",   # ⚠️ WAJIB ganti dari localhost
+        port=3306,
         user="deepfake",
         password="Deepfake123!",
-        database="deepfake_db"
+        database="deepfake_db",
+        auth_plugin="mysql_native_password"
     )
+
 
 
 def _ensure_dataset_table():
