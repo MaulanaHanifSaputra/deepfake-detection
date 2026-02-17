@@ -51,10 +51,11 @@ import mysql.connector
 def get_db():
     return mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="",
+        user="deepfake",
+        password="Deepfake123!",
         database="deepfake_db"
     )
+
 
 def _ensure_dataset_table():
     db = get_db()
@@ -657,3 +658,4 @@ register_enhanced_routes(app)
 # ===============================
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
+
